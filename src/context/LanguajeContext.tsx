@@ -37,6 +37,7 @@ export function LanguageProvider({ children }: Props) {
 		setLanguage: (lang: string) => {
 			setLanguage(lang);
 			window.localStorage.setItem('language', lang);
+			document.title = lang === 'es' ? 'Portafolio' : 'Portfolio';
 		}
 	};
 
