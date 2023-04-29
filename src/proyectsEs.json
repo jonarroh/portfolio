@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Emojify",
+		"description": "Una interfaz de línea de comandos para mensajes de confirmación convencionales con emojis",
+		"url": "https://github.com/jonarroh/Emojify",
+		"tech": ["Rust"],
+		"img": ""
+	},
+	{
+		"name": "Brouter",
+		"description": "Pequeño enrutador para React",
+		"url": "https://github.com/jonarroh/Brouter",
+		"tech": ["React", "Typescript"],
+		"img": ""
+	},
+	{
+		"name": "MarkVue",
+		"description": "Editor de Markdown con vista previa hecho con Vue",
+		"url": "https://github.com/jonarroh/Emojify",
+		"tech": ["Vue", "Typescript", "Pinia", "TailwindCSS"],
+		"img": "https://github.com/jonarroh/markVue"
+	},
+	{
+		"name": "WhisperApi",
+		"description": "Una API simple para convertir audio a texto",
+		"url": "https://github.com/jonarroh/WhisperAPI",
+		"tech": ["Python", "Flask"],
+		"img": ""
+	}
+]

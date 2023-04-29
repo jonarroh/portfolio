@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguajeContext';
 import CardProfile from '../components/UI/CardProfile';
 import Experience from '../components/UI/Experience';
+import CardProyect from '../components/UI/CardProyect';
 
 function Home() {
 	const { language } = useLanguage();
@@ -22,10 +23,6 @@ function Home() {
 		}
 	}, [language]);
 
-	useEffect(() => {
-		console.log('showCard', currentCard);
-	}, [currentCard]);
-
 	return (
 		<>
 			<div className="border border-slate-500 px-5 py-2 flex flex-row justify-around rounded-md">
@@ -37,7 +34,6 @@ function Home() {
 							onClick={() => {
 								if (currentCard === 1) return;
 								setCurrentCard(1);
-								console.log('showCard', currentCard);
 							}}>
 							{textLanguage.home}
 						</button>
@@ -80,11 +76,7 @@ function Home() {
 				<>
 					{currentCard === 1 && <CardProfile />}
 					{currentCard === 2 && <Experience />}
-					{currentCard === 3 && (
-						<h1 className="text-2xl font-bold text-slate-900 dark:text-slate-50">
-							Not supported yet
-						</h1>
-					)}
+					{currentCard === 3 && <CardProyect />}
 				</>
 			}
 		</>

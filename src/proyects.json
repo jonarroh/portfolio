@@ -1,0 +1,30 @@
+[
+	{
+		"name": "Emojify",
+		"description": "A CLI to conventional commit messages with emojis",
+		"url": "https://github.com/jonarroh/Emojify",
+		"tech": ["Rust"],
+		"img": ""
+	},
+	{
+		"name": "Brouter",
+		"description": "tiny router react",
+		"url": "https://github.com/jonarroh/Brouter",
+		"tech": ["React", "Typescript"],
+		"img": ""
+	},
+	{
+		"name": "MarkVue",
+		"description": "Markdown editor with preview made with Vue",
+		"url": "https://github.com/jonarroh/Emojify",
+		"tech": ["Vue", "Typescript", "Pinia", "TailwindCSS"],
+		"img": "https://github.com/jonarroh/markVue"
+	},
+	{
+		"name": "WhisperApi",
+		"description": "A simple API to convert audio to text",
+		"url": "https://github.com/jonarroh/WhisperAPI",
+		"tech": ["Python", "Flask"],
+		"img": ""
+	}
+]
