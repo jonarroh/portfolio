@@ -1,6 +1,21 @@
 import { Card, Timeline } from 'flowbite-react';
+import { useLanguage } from '../../context/LanguajeContext';
+import { useEffect, useState } from 'react';
+import { text } from '../../../i18n/En';
+import { text as textEs } from '../../../i18n/Es';
 
 function Experience() {
+	const { language } = useLanguage();
+	const [textLanguage, setTextLanguage] = useState(text);
+
+	console.log('language', language);
+	useEffect(() => {
+		if (language === 'es') {
+			setTextLanguage(textEs);
+		} else {
+			setTextLanguage(text);
+		}
+	}, [language]);
 	return (
 		<>
 			<div className="min-w-min mt-8">
@@ -9,26 +24,24 @@ function Experience() {
 						<Timeline.Item>
 							<Timeline.Point />
 							<Timeline.Content>
-								<Timeline.Time>Actualmente</Timeline.Time>
+								<Timeline.Time>{text.dateNow}</Timeline.Time>
 								<Timeline.Title>
 									Metaphorce by Forte Innovation Consulting
 								</Timeline.Title>
 								<Timeline.Body>
-									Desarrollo usando typescript/javascript
+									{textLanguage.descriptionNow}
 								</Timeline.Body>
 							</Timeline.Content>
 						</Timeline.Item>
 						<Timeline.Item>
 							<Timeline.Point />
 							<Timeline.Content>
-								<Timeline.Time>junio - septiembre 2022</Timeline.Time>
+								<Timeline.Time>{text.dateLast}</Timeline.Time>
 								<Timeline.Title>
 									Forte Innovation Consulting
 								</Timeline.Title>
 								<Timeline.Body>
-									Cree documentacion de los procesos con UML, realice
-									interfaces de usuario con Vue, vue-router, vuex, asi
-									como tambien me enseñaron a reaclizar pruebas
+									{textLanguage.descriptionLast}
 									unitarias
 								</Timeline.Body>
 							</Timeline.Content>

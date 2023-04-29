@@ -3,8 +3,7 @@ import ThemeButton from '../components/ThemeButton';
 import { text } from '../../i18n/En';
 import { text as textEs } from '../../i18n/Es';
 import LanguajeButton from '../components/LanguajeButton';
-import { useDetectedLenguaje } from '../hooks/useDetectedLenguaje';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguajeContext';
 import CardProfile from '../components/UI/CardProfile';
 import Experience from '../components/UI/Experience';
@@ -51,14 +50,23 @@ function Home() {
 							onClick={() => {
 								if (currentCard === 2) return;
 								setCurrentCard(2);
-								console.log('showCard', currentCard);
 							}}>
 							{textLanguage.experience}
 						</button>
 					}
 				</Section>
 				{/* projects */}
-				<Section>{textLanguage.projects}</Section>
+				<Section>
+					{
+						<button
+							onClick={() => {
+								if (currentCard === 3) return;
+								setCurrentCard(3);
+							}}>
+							{textLanguage.projects}
+						</button>
+					}
+				</Section>
 				{/* theme */}
 				<Section>
 					<ThemeButton />
@@ -72,6 +80,11 @@ function Home() {
 				<>
 					{currentCard === 1 && <CardProfile />}
 					{currentCard === 2 && <Experience />}
+					{currentCard === 3 && (
+						<h1 className="text-2xl font-bold text-slate-900 dark:text-slate-50">
+							Not supported yet
+						</h1>
+					)}
 				</>
 			}
 		</>
