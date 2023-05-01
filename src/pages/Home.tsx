@@ -25,7 +25,7 @@ function Home() {
 
 	return (
 		<>
-			<main className="h-screen w-screen flex flex-col px-2  lg:justify-center lg:items-center pt-4">
+			<main className="h-screen w-screen flex flex-col px-2  md:justify-center lg:justify-center md:items-center lg:items-center pt-4">
 				<div className="border border-slate-500 px-5 py-2 flex flex-row justify-around rounded-md ">
 					{/* about */}
 					<Section>
@@ -74,7 +74,7 @@ function Home() {
 					</Section>
 				</div>
 				{
-					<div className="h-full overflow-scroll px-2 flex flex-col items-center ">
+					<div className="h-full  px-2 flex flex-col items-center ">
 						<>
 							{currentCard === 1 && <CardProfile />}
 							{currentCard === 2 && <Experience />}
