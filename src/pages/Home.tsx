@@ -25,60 +25,64 @@ function Home() {
 
 	return (
 		<>
-			<div className="border border-slate-500 px-5 py-2 flex flex-row justify-around rounded-md">
-				{/* about */}
-				<Section>
-					{' '}
-					{
-						<button
-							onClick={() => {
-								if (currentCard === 1) return;
-								setCurrentCard(1);
-							}}>
-							{textLanguage.home}
-						</button>
-					}
-				</Section>
-				{/* experience*/}
-				<Section>
-					{
-						<button
-							onClick={() => {
-								if (currentCard === 2) return;
-								setCurrentCard(2);
-							}}>
-							{textLanguage.experience}
-						</button>
-					}
-				</Section>
-				{/* projects */}
-				<Section>
-					{
-						<button
-							onClick={() => {
-								if (currentCard === 3) return;
-								setCurrentCard(3);
-							}}>
-							{textLanguage.projects}
-						</button>
-					}
-				</Section>
-				{/* theme */}
-				<Section>
-					<ThemeButton />
-				</Section>
-				{/* i18n */}
-				<Section>
-					<LanguajeButton />
-				</Section>
-			</div>
-			{
-				<>
-					{currentCard === 1 && <CardProfile />}
-					{currentCard === 2 && <Experience />}
-					{currentCard === 3 && <CardProyect />}
-				</>
-			}
+			<main className="h-screen w-screen flex flex-col px-2  lg:justify-center lg:items-center pt-4">
+				<div className="border border-slate-500 px-5 py-2 flex flex-row justify-around rounded-md ">
+					{/* about */}
+					<Section>
+						{' '}
+						{
+							<button
+								onClick={() => {
+									if (currentCard === 1) return;
+									setCurrentCard(1);
+								}}>
+								{textLanguage.home}
+							</button>
+						}
+					</Section>
+					{/* experience*/}
+					<Section>
+						{
+							<button
+								onClick={() => {
+									if (currentCard === 2) return;
+									setCurrentCard(2);
+								}}>
+								{textLanguage.experience}
+							</button>
+						}
+					</Section>
+					{/* projects */}
+					<Section>
+						{
+							<button
+								onClick={() => {
+									if (currentCard === 3) return;
+									setCurrentCard(3);
+								}}>
+								{textLanguage.projects}
+							</button>
+						}
+					</Section>
+					{/* theme */}
+					<Section>
+						<ThemeButton />
+					</Section>
+					{/* i18n */}
+					<Section>
+						<LanguajeButton />
+					</Section>
+				</div>
+				{
+					<div className="h-full overflow-scroll px-2 flex flex-col items-center ">
+						<>
+							{currentCard === 1 && <CardProfile />}
+							{currentCard === 2 && <Experience />}
+							{currentCard === 3 && <CardProyect />}
+						</>
+					</div>
+				}
+			</main>
 		</>
 	);
 }

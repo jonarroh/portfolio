@@ -15,7 +15,7 @@ function CardProyect() {
 		<>
 			{proyects.map((proyect: Props) => (
 				<div
-					className="max-w-md mt-4 overflow-scroll"
+					className=" mt-4 flex flex-col w-full  justify-center "
 					key={proyect.name}>
 					<Card horizontal={true}>
 						<h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

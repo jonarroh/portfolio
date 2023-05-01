@@ -17,7 +17,7 @@ function CardProfile() {
 
 	return (
 		<>
-			<div className="min-w-min mt-8">
+			<div className="w-80 mt-8">
 				<Card>
 					<div className="flex flex-col items-center pb-10">
 						<img
